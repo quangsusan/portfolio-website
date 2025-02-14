@@ -1,0 +1,187 @@
+/* Reset CSS */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Giới thiệu */
+#about {
+    padding: 100px 5%;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-container img {
+    width: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* Dự án */
+#projects {
+    padding: 80px 5%;
+    background-color: #f0f0f0;
+}
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project {
+    position: relative;
+    width: 300px;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+/* Liên hệ */
+#contact {
+    padding: 50px 5%;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+/* ============= RESPONSIVE ============= */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img {
+        margin-bottom: 15px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .project {
+        width: 90%;
+    }
+}
+
+/* Mobile (dưới 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .about-container img {
+        width: 120px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .overlay {
+        font-size: 14px;
+    }
+}
